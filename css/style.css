@@ -172,7 +172,11 @@ body:after {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed; }
-  .bg-image.overlay {
+  .bg-image.overlay {  background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     position: relative; }
     .bg-image.overlay:after {
       position: absolute;
@@ -188,11 +192,11 @@ body:after {
     position: relative;
     z-index: 1; }
 
-@media (max-width: 991.98px) {
+@media (max-width: 100% auto) {
   .img-md-fluid {
-    max-width: 100%; } }
+    max-width: 100% auto; } }
 
-@media (max-width: 991.98px) {
+@media (max-width: 100% auto) {
   .display-1, .display-3 {
     font-size: 3rem; } }
 
@@ -310,7 +314,9 @@ body:after {
           transform: translateY(-50%);
           font-family: 'icomoon'; }
       .site-navbar .site-navigation .site-menu .has-children .dropdown {
-        visibility: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        visibility: visible;
         opacity: 0;
         top: 100%;
         position: absolute;
@@ -554,12 +560,17 @@ body:after {
 
 /* Blocks */
 .site-blocks-cover {
-  background-size: cover;
+  background-size:100%;
   background-repeat: no-repeat;
-  background-position: top;
-  background-position: center center; }
+  background-position: center center;
+  background-attachment: fixed; }
   .site-blocks-cover.overlay {
-    position: relative; }
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+    }
     .site-blocks-cover.overlay:before {
       position: absolute;
       content: "";
